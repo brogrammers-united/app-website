@@ -15,6 +15,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router/immutable';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 // Import root app
 import App from 'containers/App';
@@ -32,6 +34,10 @@ import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
+// import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+// Add the icons for use in the application
+library.add(fab);
 
 // Create redux store with history
 const initialState = {};
